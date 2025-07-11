@@ -1,0 +1,14 @@
+# SmartCharge Helper PVPC - MCP Server
+# Dependencies for the smart charging advisor server
+
+# MCP Framework
+mcp>=1.0.0
+
+# HTTP client for API calls
+httpx>=0.27.0
+
+# Data validation and models
+pydantic>=2.0.0
+
+# Date/time utilities (built-in, no need to install)
+# datetime, json, typing are built-in modules
