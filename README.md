@@ -1,10 +1,10 @@
-# 🚗⚡ SmartCharge Helper PVPC - MCP Server
+# 🚗 SmartCharge Helper PVPC - MCP Server
 
 > **Smart electric vehicle charging recommendations based on real-time Spanish PVPC electricity prices**
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that provides intelligent charging recommendations for electric vehicles using live electricity pricing data from the Spanish market (PVPC).
 
-## 🌟 Features
+## Features
 
 - **Real-time PVPC Prices**: Live electricity pricing from REE APIDATOS
 - **Smart Charging Windows**: Find the best hours to charge your EV
@@ -70,7 +70,7 @@ pip install -r requirements.txt
 python -m smartcharge_helper_pvpc
 ```
 
-## 📋 Available Tools
+## Available Tools
 
 ### `get_current_pvpc_prices`
 Get current electricity prices for any date.
@@ -78,7 +78,7 @@ Get current electricity prices for any date.
 ### `get_best_charging_hours`
 Find optimal charging windows based on electricity prices.
 
-##  📊 Example Usage
+##  Example Usage
 
 ### Real-world Scenario: Tesla Model 3 Charging
 
@@ -87,7 +87,7 @@ Estimated cost: 6.42€ (50 kWh)
 Average price: 0.1283€/kWh  
 Savings vs peak hour: 1.41€ (18% cheaper)
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License.
 
