@@ -1,8 +1,17 @@
 # 🚗⚡ SmartCharge Helper PVPC - MCP Server
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
+[![Python](https://img.shields.io/badge/Python-3.12+-green.svg)](https://www.python.org/)
+[![MCP](https://img.shields.io/badge/MCP-Server-purple.svg)](https://modelcontextprotocol.io/)
+
+<div align="center">
+  <img src="smartcharger.gif" alt="SmartCharger Demo" width="800"/>
+</div>
+
 > **Smart electric vehicle charging recommendations based on real-time Spanish PVPC electricity prices**
 
-A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that provides intelligent charging recommendations for electric vehicles using live electricity pricing data from the Spanish market (PVPC).
+A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that helps you find the cheapest hours to charge your electric vehicle using real-time Spanish electricity prices (PVPC).
 
 ## 🌟 Features
 
@@ -13,83 +22,55 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that p
 
 ## 🚀 Quick Start
 
-### Docker (Recommended)
-
+**1. Clone & Build:**
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/smartcharge-helper-pvpc.git
-cd smartcharge-helper-pvpc
-
-# Build and run with Docker
+git clone https://github.com/franpinedab/smartcharge_helper_pvpc.git
+cd smartcharge_helper_pvpc
 docker build -t smartcharge-helper-pvpc .
-docker run -it smartcharge-helper-pvpc
-
-# Or use docker-compose
-docker-compose up
 ```
 
-### VS Code Integration
-
-**Option 1: Using Docker (Recommended)**
+**2. Add to VS Code MCP (`mcp.json`):**
 ```json
 {
   "servers": {
-    "charging-advisor": {
+    "smartcharge-helper-pvpc": {
       "command": "docker",
-      "args": [
-        "run", "-i", "--rm",
-        "smartcharge-helper-pvpc"
-      ],
+      "args": ["run", "-i", "--rm", "smartcharge-helper-pvpc"],
       "type": "stdio"
     }
   }
 }
 ```
 
-**Option 2: Using Local Python**
-```json
-{
-  "servers": {
-    "charging-advisor": {
-      "command": "python",
-      "args": ["-m", "smartcharge_helper_pvpc"],
-      "cwd": "/path/to/smartcharge-helper-pvpc",
-      "type": "stdio"
-    }
-  }
-}
-```
 
-### Local Installation (Optional)
+**SmartCharger Response:**
+- **🌞 Best choice - Daytime (12:00-17:00):** 1.24€ (36 kWh)  
+- **🌙 Alternative - Nighttime (03:00-08:00):** 5.48€  
+- **❌ Avoid:** 21:00-23:00 (peak prices: 0.17-0.18€/kWh)
+
+**💰 Savings:** 4.24€ by charging during solar hours!
+
+## 🛠️ Development
+
+**Requirements:** Python 3.12+ or Docker
 
 ```bash
-# Install dependencies
+# Without Docker (for development)
+git clone https://github.com/franpinedab/smartcharge_helper_pvpc.git
+cd smartcharge_helper_pvpc
 pip install -r requirements.txt
-
-# Run the server
 python -m smartcharge_helper_pvpc
 ```
 
-## 📋 Available Tools
+## 🔗 Links
 
-### `get_current_pvpc_prices`
-Get current electricity prices for any date.
-
-### `get_best_charging_hours`
-Find optimal charging windows based on electricity prices.
-
-##  📊 Example Usage
-
-### Real-world Scenario: Tesla Model 3 Charging
-
-Best charging window: 01:00 - 08:00  
-Estimated cost: 6.42€ (50 kWh)  
-Average price: 0.1283€/kWh  
-Savings vs peak hour: 1.41€ (18% cheaper)
+- **Repository:** [franpinedab/smartcharge_helper_pvpc](https://github.com/franpinedab/smartcharge_helper_pvpc)
+- **Data Source:** [REE APIDATOS](https://www.ree.es/es/apidatos) (Red Eléctrica de España)
+- **MCP Protocol:** [Model Context Protocol](https://modelcontextprotocol.io/)
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+MIT License - see [LICENSE](LICENSE) file.
 
----
+
 
