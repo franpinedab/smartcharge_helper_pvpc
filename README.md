@@ -1,4 +1,4 @@
-# 🚗⚡ SmartCharge Helper PVPC - MCP Server
+# 🚗 SmartCharge Helper PVPC - MCP Server
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
@@ -13,7 +13,7 @@
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that helps you find the cheapest hours to charge your electric vehicle using real-time Spanish electricity prices (PVPC).
 
-## 🌟 Features
+## Features
 
 - **Real-time PVPC Prices**: Live electricity pricing from REE APIDATOS
 - **Smart Charging Windows**: Find the best hours to charge your EV
@@ -43,11 +43,6 @@ docker build -t smartcharge-helper-pvpc .
 ```
 
 
-**SmartCharger Response:**
-- **🌞 Best choice - Daytime (12:00-17:00):** 1.24€ (36 kWh)  
-- **🌙 Alternative - Nighttime (03:00-08:00):** 5.48€  
-- **❌ Avoid:** 21:00-23:00 (peak prices: 0.17-0.18€/kWh)
-
 **💰 Savings:** 4.24€ by charging during solar hours!
 
 ## 🛠️ Development
@@ -71,6 +66,11 @@ python -m smartcharge_helper_pvpc
 ## 📄 License
 
 MIT License - see [LICENSE](LICENSE) file.
+
+---
+<div align="center">
+<strong>Made with ⚡ for smarter EV charging in Spain</strong>
+</div>
 
 
 
