@@ -43,7 +43,6 @@ docker build -t smartcharge-helper-pvpc .
 ```
 
 
-**💰 Savings:** 4.24€ by charging during solar hours!
 
 ## 🛠️ Development
 
